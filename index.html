@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>Potato Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ChatFolder">
+        <form id="SearchBox">
+            <input type="text" placeholder="search">
+            <button type="submit">search</button>
+        </form>
+        <div class="user_list">
+            <div class="user">
+                <img src="https://static.dw.com/image/18046772_605.jpg" class="avatar" alt="User 1">
+                <span class="username">اميرنا</span>
+            </div>
+            <div class="user">
+                <img src="https://www.marefa.org/w/images/thumb/0/06/Julani.png/450px-Julani.png" class="avatar" alt="User 2">
+                <span class="username">احمد</span>
+            </div>
+            <div class="user">
+                <img src="https://i.pinimg.com/236x/0d/97/59/0d97599045875d349b4cfd3b6cba84c5.jpg" class="avatar" alt="User 3">
+                <span class="username">صهيب</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="ChatBox">
+        <div class="messages" id="messages">
+            <div class="msg_received">كيف حالك</div>
+        </div>
+
+        <form id="msgBox">
+            <input type="text" id="msgInput" placeholder="Message">
+            <button type="button" id="attachBtn">📎</button>
+            <input type="file" id="fileInput" hidden>
+            <button type="submit" id="send">send</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

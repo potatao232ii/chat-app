@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3A4750;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.ChatFolder {
+    width: 250px;
+    height: 500px;
+    background-color: #2c2d32;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ChatBox {
+    flex: 1;
+    height: 500px;
+    background-color: #323339;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#msgBox {
+    width: 90%;
+    height: 10vh;
+    background-color: #393a41;
+    border: 1px solid rgb(63, 63, 63);
+    border-radius: 10px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin-top: auto;
+}
+
+#msgBox:focus-within {
+    border: 1px solid rgb(110, 110, 110);
+}
+
+#msgInput {
+    flex: 1;
+    height: 60%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: white;
+    font-size: 1em;
+    text-align: left;
+}
+
+#send {
+    width: 10%;
+    height: 60%;
+    color: rgb(165, 165, 255);
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+#send:hover {
+    color: rgb(99, 99, 113);
+}
+
+#attachBtn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+#attachBtn:hover {
+    color: #ccc;
+}
+
+.msg_sent, .msg_received {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 0.95em;
+    word-wrap: break-word;
+}
+
+.msg_sent {
+    background-color: #2d2d2d;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 0;
+}
+
+.msg_received {
+    background-color: #e0e0e0;
+    color: black;
+    align-self: flex-start;
+    border-bottom-left-radius: 0;
+}
+
+.msg-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.msg-file {
+    color: #4a90e2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.msg-file:hover {
+    text-decoration: underline;
+}
+
+#SearchBox {
+    display: flex;
+    gap: 10px;
+}
+
+#SearchBox input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #1e1f22;
+    color: white;
+    border: none;
+}
+
+#SearchBox button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user_list {
+    margin-top: 15px;
+    overflow-y: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #444;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.user:hover {
+    background-color: #555;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.msg-image {
+    max-width: 100%;
+    max-height: 50vh;
+    border-radius: 10px;
+    display: block;
+    object-fit: contain;
+}
+
+.msg-video {
+    max-width: 100%;
+    max-height: 50vh;
+    border-radius: 10px;
+    display: block;
+    object-fit: contain;
+}
