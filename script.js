@@ -34,13 +34,20 @@ fileInput.addEventListener("change", () => {
         img.src = URL.createObjectURL(file);
         img.className = "msg-image";
         msgDiv.appendChild(img);
-    } else if (file.type.startsWith("video/")) {
+    } else if (file.type.startsWith("video/") || file.type.startsWith("audio/")) {
         const video = document.createElement("video");
         video.src = URL.createObjectURL(file);
         video.className = "msg-video";
         video.controls = true;
         msgDiv.appendChild(video);
+    } else if (file.type.startsWith("application/pdf") || file.type.startsWith("text/")) {
+        const video = document.createElement("iframe");
+        video.src = URL.createObjectURL(file);
+        video.className = "msg-file";
+        video.controls = true;
+        msgDiv.appendChild(video);
     } else {
+        console.log(file.type)
         const link = document.createElement("a");
         link.href = URL.createObjectURL(file);
         link.download = file.name;
